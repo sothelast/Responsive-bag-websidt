@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scale=no" />
+    <link href="F:\Program Files\fontawesome\css\all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="technobag.css">
+    <title>Techno bags</title>
+    <link rel="icon" href="2.jpeg">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <img id="logo" src="logo-removebg-preview.png" alt="logo">
+
+        <!-- social media icon -->
+        <nav id="nav1">
+            <ul>
+                <li>
+                    <a href="#"><i id="facebook" class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"> <i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"> <i style="color: black;" class="fab fa-unsplash"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- social media icon -->
+
+        <div class="sub_cont">
+            <!-- nevagation bar start -->
+            <i id="cart" class="fas fa-shopping-cart"></i>
+            <span id="contiong"></span>
+
+
+            <input type="checkbox" name="checkbox" id="so">
+            <label for="so">
+                <i id="nivg" onclick="change()" class="fas fa-bars"></i>
+            </label>
+
+
+            <nav class="nav2">
+                <ol>
+                    <li id="list1"><a href="#"><i id="prof" class="fas fa-user-circle"></i></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="list2"><a href="#"><i  class="fas fa-user-circle"></i></a></li>
+                </ol>
+            </nav>
+
+            <!-- nevagation bar End -->
+
+            <!-- inner content start -->
+            <div class="child a">
+                <h2>Techno Bags</h2><br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis doloremque maiores id ducimus facilis hic explicabo fugiat nihil! Delectus officia repellendus asperiores ut error odit porro possimusinventore
+                    alias aliquam.</p><br>
+
+
+                <div class="product">
+                    <div class="pd">
+                        <img src="images/pxfuel.com__3_-removebg-preview.png" alt="hand bag">
+                        <h3>Hand Bag</h3>
+                        <p id="para">Some thing about bag<br>$150-250</p>
+                    </div>
+                    <div class="pd">
+                        <img src="images/pxfuel.com__2_-removebg-preview.png" alt="hand bag">
+                        <h3>Hand Bag</h3>
+                        <p id="para">Some thing about bag<br>$150-250</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="childb">
+                <img src="images/cbag8.png" alt="bag imag" id="cbag">
+
+                <i id="rihgt_arrow" onclick="Next()" class="fas fa-chevron-right"></i>
+
+                <div class="buttons">
+                    <div onclick="increse()" class="buy">Add to cart</div>
+                    <div class="buy a">Buy now</div>
+                </div>
+
+            </div>
+            <!-- inner content End -->
+        </div>
+
+
+    </div>
+</body>
+<script>
+    function change() {
+        var a = document.getElementById("nivg");
+        if (a.className == "fas fa-bars") {
+            a.className = " fas fa-times";
+            a.style.color = "white";
+        } else {
+            a.className = "fas fa-bars";
+            a.style.color = "black";
+        }
+    }
+    var b = 1;
+
+    function increse() {
+        var c = document.getElementById("contiong");
+        c.style.transform = "scale(1)";
+        c.innerHTML = b;
+        b++;
+    }
+
+    var z = 0;
+    var images = [
+        "images/cbag8.png",
+        "images/cbag2.png",
+        "images/cbag1.png",
+        "images/cbag5.png"
+    ]
+
+    function Next() {
+        var sider = document.getElementById("cbag");
+        z++;
+        if (z >= images.length)
+            z = 0;
+
+
+        sider.src = images[z];
+
+    }
+</script>
+
+</html>
